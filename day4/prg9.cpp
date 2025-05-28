@@ -1,4 +1,4 @@
-/*using while create*/
+/*Program to print the digits of a number in reverse order*/
 #include <iostream>
 using namespace std;
 int main()

@@ -1,19 +1,18 @@
-/*convert binary to decimal*/
-#include <iostream>
+ #include <iostream>
 using namespace std;
-int main()
+int main() 
 {
-    int n, decimal = 0, base = 1, rem;
-    cout << "Enter a binary number:\n";
-    cin >> n;
-
-    while (n > 0)
+    int binary, decimal = 0, power = 1,lastDigit;
+    
+    cout << "Enter binary number: ";
+    cin >> binary;
+    while(binary > 0) 
     {
-        int last digit = n % 10;
-        decimal=decimal+rem*base;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       last digit * base;
-        n= n/10;
-        base=base*2;
+        lastDigit = binary % 10;  
+        decimal += lastDigit * power; 
+        power *= 2;                  
+        binary /= 10;                
     }
-    cout << "Decimal:\n" << decimal << endl;
+    cout << "Decimal number: " << decimal;
     return 0;
 }
